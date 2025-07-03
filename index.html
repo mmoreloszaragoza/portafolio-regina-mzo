@@ -7,87 +7,6 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 30px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-        p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .pdf-embed-container {
-            position: relative;
-            width: 100%;
-            /* Ajusta el padding-bottom para la relación de aspecto de tu PDF.
-               Por ejemplo, 141.4% para A4 vertical (alto/ancho * 100). */
-            padding-bottom: 129%; /* Relación de aspecto común para 8.5x11 pulgadas */
-            overflow: hidden;
-            margin-top: 20px;
-            border: 1px solid #ddd; /* Añadido un borde al contenedor */
-            border-radius: 4px; /* Bordes redondeados */
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Sombra sutil */
-        }
-        .pdf-embed-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none; /* Elimina el borde del iframe */
-        }
-        .contact-info {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 0.9em;
-            color: #555;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Portafolio de Regina Morelos Zaragoza Olivares</h1>
-        <p>Bienvenido al portafolio de Regina Morelos Zaragoza Olivares. Aquí puedes explorar sus trabajos y proyectos más recientes.</p>
-
-        <div class="pdf-embed-container">
-            <iframe src="Portafolio_2025-comprimido.pdf" title="Portafolio de Regina Morelos Zaragoza Olivares" allowfullscreen>
-                Tu navegador no soporta la visualización de PDFs.
-            </iframe>
-        </div>
-        
-        <div class="contact-info">
-            <h3>Contacto:</h3>
-            <p>Para colaboraciones o consultas, puedes contactar a Regina Morelos Zaragoza Olivares en:</p>
-            <p>Email: <a href="mailto:regina.moreloszo@gmail.com">regina.moreloszo@gmail.com</a></p>
-            <p>Teléfono: +52 442 412 7328</p>
-        </div>
-    </div>
-</body>
-</html> -->
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Regina Morelos Zaragoza Olivares</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -188,6 +107,64 @@
         <p>Para colaboraciones o consultas, puedes contactar a Regina Morelos Zaragoza Olivares en:</p>
         <p>Email: <a href="mailto:regina.moreloszo@gmail.com">regina.moreloszo@gmail.com</a></p>
         <p>Teléfono: +52 442 412 7328</p>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Regina Morelos Zaragoza Olivares</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Fondo negro para que la imagen destaque más si no llena todo */
+            display: flex; /* Usamos flexbox para centrar la imagen */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            min-height: 100vh; /* La altura mínima es el 100% de la ventana */
+            overflow: hidden; /* Evita barras de desplazamiento si la imagen es muy grande */
+        }
+
+        .portfolio-image-container {
+            width: 100%;
+            height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Elimina sombras y bordes si quieres una integración total */
+            box-shadow: none;
+            border-radius: 0;
+        }
+
+        .portfolio-image-container img {
+            max-width: 100%; /* La imagen no superará el ancho de la pantalla */
+            max-height: 100vh; /* La imagen no superará la altura de la ventana */
+            height: auto; /* Mantiene la proporción de la imagen */
+            width: auto; /* Mantiene la proporción de la imagen */
+            display: block;
+            object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin recortarse */
+            /* Si la imagen es más alta que ancha, 'contain' dejará barras a los lados.
+               Si es más ancha que alta, dejará barras arriba/abajo.
+               Si quieres que SIEMPRE llene la pantalla (recortando si es necesario), usa 'cover' */
+
+            /* Eliminamos bordes y sombras para una apariencia limpia */
+            border: none;
+            box-shadow: none;
+            margin: 0; /* Elimina cualquier margen residual */
+        }
+
+        /* Puedes eliminar todas las reglas @media anteriores si solo quieres esto */
+        /* Si solo quieres la imagen, no necesitas ajustar para móviles, la configuración de arriba ya es responsiva */
+    </style>
+</head>
+<body>
+    <div class="portfolio-image-container">
+        <img src="Portafolio_2025-comprimido.jpg" alt="Portafolio de Regina Morelos Zaragoza Olivares">
     </div>
 </body>
 </html>
