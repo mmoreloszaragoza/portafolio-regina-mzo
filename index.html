@@ -122,44 +122,41 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000; /* Fondo negro para que la imagen destaque más si no llena todo */
-            display: flex; /* Usamos flexbox para centrar la imagen */
-            justify-content: center; /* Centra horizontalmente */
-            align-items: center; /* Centra verticalmente */
+            background-color: #000; /* Fondo negro */
+            /* Quitamos flexbox del body para permitir el scroll natural */
+            /* display: flex; */
+            /* justify-content: center; */
+            /* align-items: center; */
             min-height: 100vh; /* La altura mínima es el 100% de la ventana */
-            overflow: hidden; /* Evita barras de desplazamiento si la imagen es muy grande */
+            overflow-x: hidden; /* Oculta el scroll horizontal si aparece */
+            overflow-y: auto; /* Permite el scroll vertical si el contenido es más alto */
         }
 
         .portfolio-image-container {
-            width: 100%;
-            height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+            width: 100%; /* Ocupa todo el ancho disponible */
             display: flex;
-            justify-content: center;
-            align-items: center;
-            /* Elimina sombras y bordes si quieres una integración total */
+            justify-content: center; /* Centra la imagen horizontalmente */
+            align-items: flex-start; /* Alinea la imagen arriba del contenedor */
+            /* Quitamos height: 100vh; para que el contenedor pueda crecer con la imagen */
+            /* height: 100vh; */
             box-shadow: none;
             border-radius: 0;
         }
 
         .portfolio-image-container img {
-            max-width: 100%; /* La imagen no superará el ancho de la pantalla */
-            max-height: 100vh; /* La imagen no superará la altura de la ventana */
-            height: auto; /* Mantiene la proporción de la imagen */
-            width: auto; /* Mantiene la proporción de la imagen */
+            width: 100%; /* La imagen SIEMPRE ocupará el 100% del ancho de su contenedor */
+            height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
             display: block;
-            object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor sin recortarse */
-            /* Si la imagen es más alta que ancha, 'contain' dejará barras a los lados.
-               Si es más ancha que alta, dejará barras arriba/abajo.
-               Si quieres que SIEMPRE llene la pantalla (recortando si es necesario), usa 'cover' */
+            /* Eliminamos object-fit: contain; para que la imagen pueda desbordar la altura */
+            /* object-fit: contain; */
 
-            /* Eliminamos bordes y sombras para una apariencia limpia */
             border: none;
             box-shadow: none;
-            margin: 0; /* Elimina cualquier margen residual */
+            margin: 0;
         }
 
         /* Puedes eliminar todas las reglas @media anteriores si solo quieres esto */
-        /* Si solo quieres la imagen, no necesitas ajustar para móviles, la configuración de arriba ya es responsiva */
+        /* La configuración de arriba ya es responsiva para la imagen */
     </style>
 </head>
 <body>
