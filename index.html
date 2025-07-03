@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -75,6 +75,119 @@
             <p>Email: <a href="mailto:regina.moreloszo@gmail.com">regina.moreloszo@gmail.com</a></p>
             <p>Teléfono: +52 442 412 7328</p>
         </div>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Regina Morelos Zaragoza Olivares</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        /* Estilos para el encabezado y el texto descriptivo */
+        .intro-section {
+            background-color: #fff;
+            padding: 20px 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            max-width: 900px;
+            margin: 20px auto; /* Centra y da margen */
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para la imagen del portafolio */
+        .portfolio-image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Centra la imagen horizontalmente */
+            align-items: flex-start; /* Alinea la imagen arriba, si su alto es menor que la ventana */
+            min-height: calc(100vh - 40px - 140px); /* Ocupa la altura restante, ajusta si intro/contact tienen más alto */
+            /* 100vh = 100% de la altura de la ventana
+               40px = margen superior e inferior del .intro-section (20px cada uno)
+               140px = altura aproximada de la sección de contacto (ajusta si es necesario) */
+            margin: 0; /* Elimina márgenes extra */
+            overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde */
+        }
+
+        .portfolio-image-container img {
+            max-width: 100%; /* La imagen no superará el ancho de la pantalla */
+            height: auto; /* Mantiene la proporción de la imagen */
+            display: block; /* Elimina espacios extra debajo de la imagen */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada para la imagen principal */
+            border-radius: 5px; /* Ligeros bordes redondeados */
+            margin-bottom: 20px; /* Margen inferior para separar del contacto */
+        }
+
+        /* Ajustes para pantalla completa y sin márgenes en dispositivos grandes */
+        @media (min-width: 1024px) { /* Para pantallas de escritorio grandes */
+            .intro-section {
+                max-width: 100%; /* El encabezado puede expandirse */
+                margin: 0 auto; /* Centra */
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .portfolio-image-container {
+                min-height: calc(100vh - 200px); /* Ajusta si el encabezado y pie de página son más altos */
+            }
+            .portfolio-image-container img {
+                max-width: calc(100% - 40px); /* Un pequeño margen a los lados */
+                border-radius: 0; /* Quita los bordes redondeados si quieres que ocupe todo */
+                box-shadow: none; /* Quita la sombra si quieres que ocupe todo */
+            }
+        }
+        @media (min-width: 1400px) { /* Para pantallas ultra anchas, si quieres que la imagen sea muy grande */
+            .portfolio-image-container img {
+                max-width: 1200px; /* O un valor fijo si no quieres que se haga enorme */
+                /* También podrías usar width: 90vw; height: 90vh; object-fit: contain; para que ocupe una gran parte de la ventana */
+            }
+        }
+
+        .contact-info {
+            background-color: #fff;
+            margin-top: 30px;
+            padding: 20px 30px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #555;
+            max-width: 900px;
+            margin: 20px auto; /* Centra y da margen */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-section">
+        <h1>Portafolio de Regina Morelos Zaragoza Olivares</h1>
+        <p>Bienvenido al portafolio de Regina Morelos Zaragoza Olivares. Aquí puedes explorar su trabajo más reciente con la máxima calidad.</p>
+    </div>
+
+    <div class="portfolio-image-container">
+        <img src="images/Portafolio_2025-comprimido.jpg" alt="Portafolio de Regina Morelos Zaragoza Olivares">
+    </div>
+
+    <div class="contact-info">
+        <h3>Contacto:</h3>
+        <p>Para colaboraciones o consultas, puedes contactar a Regina Morelos Zaragoza Olivares en:</p>
+        <p>Email: <a href="mailto:regina.moreloszo@gmail.com">regina.moreloszo@gmail.com</a></p>
+        <p>Teléfono: +52 442 412 7328</p>
     </div>
 </body>
 </html>
